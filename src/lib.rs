@@ -85,7 +85,7 @@ fn statement_to_string(statement: ExecuteStatementResponse) -> String {
                 .join("\n");
 
             col_names + &rows_as_str
-        }
+        },
         ExecuteStatementResponse::Deleted(number) => format!("rows deleted: {}", number),
         ExecuteStatementResponse::Explain(result) => result,
         ExecuteStatementResponse::Updated(number) => format!("rows updated: {}", number),
